@@ -71,19 +71,34 @@ export function TrustSection() {
   return (
     <section id="product" className="py-16 md:py-24">
       <Container>
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="text-left md:text-center">
-            <div className="text-sm font-semibold text-white/70">How Tempest Works</div>
-            <p className="mt-2 text-sm text-white/65">
-              We abstract exchanges, blockchains, and wallets into a single flow—so stablecoins can be onboarded, sent, and settled as easily as traditional payments, while remaining fully on‑chain.
-            </p>
-          </div>
+        <div className="max-w-4xl text-left">
+          <h2 className="text-gradient text-3xl font-regular md:text-4xl">
+            How Tempest Works
+          </h2>
+          <p className="mt-4 text-base text-white md:text-lg">
+            We abstract exchanges, blockchains, and wallets into a single flow—so stablecoins can be onboarded, sent, and settled as easily as traditional payments, while remaining fully on‑chain.
+          </p>
         </div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {features.map((f) => (
-            <div key={f.title} className="rounded-xl border border-white/12 bg-white/[0.03] p-4">
-              <div className="flex items-start gap-3">
+            <div key={f.title} className="relative rounded-xl p-4">
+              {/* True Gradient Border (B7ACFF to 5338FF) */}
+              <div 
+                className="absolute inset-0 rounded-xl"
+                style={{
+                  padding: '1px',
+                  background: 'linear-gradient(to right,rgba(255, 255, 255, 0.5), #B7ACFF)',
+                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                  WebkitMaskComposite: 'xor',
+                  maskComposite: 'exclude',
+                  pointerEvents: 'none',
+                }}
+              />
+              {/* 5% Black Background Fill */}
+              <div className="absolute inset-0 rounded-xl bg-black/5 pointer-events-none" />
+              
+              <div className="relative flex items-start gap-3">
                 <div className="relative mt-0.5 h-8 w-8 shrink-0">
                   {f.icon ? (
                     <Image
@@ -98,8 +113,8 @@ export function TrustSection() {
                   )}
                 </div>
                 <div>
-                  <div className="text-gradient text-[13px] font-semibold">{f.title}</div>
-                  <div className="mt-1 text-[13px] leading-relaxed text-white/70">{f.body}</div>
+                  <div className="text-[16px] font-semibold text-white">{f.title}</div>
+                  <div className="mt-1 text-[13px] leading-relaxed text-white">{f.body}</div>
                 </div>
               </div>
             </div>

@@ -24,13 +24,13 @@ export function Calculator() {
       <Container>
         <div className="grid gap-6 lg:grid-cols-[1fr,1.1fr]">
           <div>
-            <h3 className="text-gradient text-sm font-semibold">Calculate Your Savings</h3>
-            <p className="mt-2 text-sm text-white/65">
+            <h3 className="text-gradient text-md font-regular">Calculate Your Savings</h3>
+            <p className="mt-2 text-sm text-white">
               Input your payment activity to see how much you could save by moving from bank transfers to stablecoin payments.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-4">
               <label className="block">
-                <div className="text-[12px] text-white/60">Tx / year</div>
+                <div className="text-[12px] text-white">Tx / year</div>
                 <input
                   className="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none ring-0 placeholder:text-white/35"
                   type="number"
@@ -39,7 +39,7 @@ export function Calculator() {
                 />
               </label>
               <label className="block">
-                <div className="text-[12px] text-white/60">Avg amount ($)</div>
+                <div className="text-[12px] text-white">Avg amount ($)</div>
                 <input
                   className="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none"
                   type="number"
@@ -48,7 +48,7 @@ export function Calculator() {
                 />
               </label>
               <label className="block">
-                <div className="text-[12px] text-white/60">SC purchase (bps)</div>
+                <div className="text-[12px] text-white">SC purchase (bps)</div>
                 <input
                   className="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none"
                   type="number"
@@ -57,7 +57,7 @@ export function Calculator() {
                 />
               </label>
               <label className="block">
-                <div className="text-[12px] text-white/60">SC $ / tx</div>
+                <div className="text-[12px] text-white">SC $ / tx</div>
                 <input
                   className="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none"
                   type="number"
@@ -67,7 +67,7 @@ export function Calculator() {
                 />
               </label>
               <label className="block">
-                <div className="text-[12px] text-white/60">Bank $ / tx</div>
+                <div className="text-[12px] text-white">Bank $ / tx</div>
                 <input
                   className="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none"
                   type="number"
@@ -76,7 +76,7 @@ export function Calculator() {
                 />
               </label>
               <label className="block">
-                <div className="text-[12px] text-white/60">SC sales (bps)</div>
+                <div className="text-[12px] text-white">SC sales (bps)</div>
                 <input
                   className="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2 text-sm outline-none"
                   type="number"
@@ -87,36 +87,53 @@ export function Calculator() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-white/12 bg-white/[0.03] p-6">
-            <div className="text-center">
-              <div className="text-[12px] text-white/60">Savings</div>
-              <div className="mt-1 text-emerald-300 text-lg font-semibold">
-                ${savingsFormat(totals.savings)} ({totals.savingsPct.toFixed(1)}%)
-              </div>
-              <div className="mt-1 text-[12px] text-white/60">
-                Breakeven purchase bps (given SC $/tx){" "}
-                <span className="text-white/75">{totals.breakevenBps.toFixed(2)} bps</span>
-              </div>
-            </div>
+          <div className="relative rounded-2xl p-6">
+            {/* True Gradient Border (B7ACFF to 5338FF) */}
+            <div 
+              className="absolute inset-0 rounded-2xl"
+              style={{
+                padding: '1px',
+                background: 'linear-gradient(to right,rgba(255, 255, 255, 0.5), #B7ACFF)',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+                maskComposite: 'exclude',
+                pointerEvents: 'none'
+              }}
+            />
+            {/* 5% Black Background Fill */}
+            <div className="absolute inset-0 rounded-2xl bg-black/5 pointer-events-none" />
 
-            <div className="mt-6 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            <div className="relative">
+              <div className="text-center">
+                <div className="text-[12px] text-white">Savings</div>
+                <div className="mt-1 text-emerald-300 text-lg font-semibold">
+                  ${savingsFormat(totals.savings)} ({totals.savingsPct.toFixed(1)}%)
+                </div>
+                <div className="mt-1 text-[12px] text-white">
+                  Breakeven purchase bps (given SC $/tx){" "}
+                  <span className="text-white">{totals.breakevenBps.toFixed(2)} bps</span>
+                </div>
+              </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <div className="text-white/60">Total bank (annual)</div>
-                <div className="mt-1 font-medium">${savingsFormat(totals.bankAnnual)}</div>
-              </div>
-              <div>
-                <div className="text-white/60">Stablecoin per tx</div>
-                <div className="mt-1 font-medium">${stablecoinPerTx.toFixed(2)}</div>
-              </div>
-              <div>
-                <div className="text-white/60">Total stablecoin (annual)</div>
-                <div className="mt-1 font-medium">${savingsFormat(totals.stablecoinAnnual)}</div>
-              </div>
-              <div>
-                <div className="text-white/60">Bank per tx</div>
-                <div className="mt-1 font-medium">${((avgAmount * bankFeeBps) / 10000).toFixed(2)}</div>
+              <div className="mt-6 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+              <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div className="text-white">Total bank (annual)</div>
+                  <div className="mt-1 font-medium">${savingsFormat(totals.bankAnnual)}</div>
+                </div>
+                <div>
+                  <div className="text-white">Stablecoin per tx</div>
+                  <div className="mt-1 font-medium">${stablecoinPerTx.toFixed(2)}</div>
+                </div>
+                <div>
+                  <div className="text-white">Total stablecoin (annual)</div>
+                  <div className="mt-1 font-medium">${savingsFormat(totals.stablecoinAnnual)}</div>
+                </div>
+                <div>
+                  <div className="text-white">Bank per tx</div>
+                  <div className="mt-1 font-medium">${((avgAmount * bankFeeBps) / 10000).toFixed(2)}</div>
+                </div>
               </div>
             </div>
           </div>
