@@ -24,8 +24,8 @@ export function Calculator() {
       <Container>
         <div className="grid gap-6 lg:grid-cols-[1fr,1.1fr]">
           <div>
-            <h3 className="text-gradient text-md font-regular">Calculate Your Savings</h3>
-            <p className="mt-2 text-sm text-white">
+            <h3 className="text-gradient text-[28px] font-regular leading-tight">Calculate Your Savings</h3>
+            <p className="mt-4 text-[16px] leading-relaxed text-white">
               Input your payment activity to see how much you could save by moving from bank transfers to stablecoin payments.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-4">

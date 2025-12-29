@@ -71,11 +71,11 @@ export function TrustSection() {
   return (
     <section id="product" className="py-16 md:py-24">
       <Container>
-        <div className="max-w-4xl text-left">
-          <h2 className="text-gradient text-3xl font-regular md:text-4xl">
+        <div className="max-w-4xl text-left md:max-w-[calc(50%-8px)]">
+          <h2 className="text-gradient text-[28px] font-regular leading-tight">
             How Tempest Works
           </h2>
-          <p className="mt-4 text-base text-white md:text-lg">
+          <p className="mt-4 text-[16px] leading-relaxed text-white">
             We abstract exchanges, blockchains, and wallets into a single flow—so stablecoins can be onboarded, sent, and settled as easily as traditional payments, while remaining fully on‑chain.
           </p>
         </div>
@@ -114,7 +114,7 @@ export function TrustSection() {
                 </div>
                 <div>
                   <div className="text-[16px] font-semibold text-white">{f.title}</div>
-                  <div className="mt-1 text-[13px] leading-relaxed text-white">{f.body}</div>
+                  <div className="mt-1 text-[12px] leading-relaxed text-white">{f.body}</div>
                 </div>
               </div>
             </div>

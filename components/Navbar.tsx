@@ -12,7 +12,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50">
       <div className="relative">
-        <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#1a1340]/40 to-transparent backdrop-blur-md" />
+        <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#1a1340]/200 to-transparent backdrop-blur-md" />
         <Container className="relative flex h-20 items-center justify-between">
           <a href="#" className="group inline-flex items-center gap-2">
             <Logo />
