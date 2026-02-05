@@ -77,12 +77,12 @@ export function OrchestrationGraphic() {
             const keyTimes = `0;${startSeq};${peakSeq};${endSeq};${startColl};${peakColl};${endColl}`;
             const opacityValues = `0.3;0.3;1;0.3;0.3;1;0.3`;
             const radiusValues = `3;3;6;3;3;6;3`;
-            const colorValues = `#B7ACFF;#B7ACFF;#FF86C8;#B7ACFF;#B7ACFF;#B7ACFF;#B7ACFF`;
+            const colorValues = `#489EFF;#489EFF;#0078FF;#489EFF;#489EFF;#489EFF;#489EFF`;
 
             return (
               <g key={i}>
                 {/* The Glowing Node */}
-                <circle cx={item.x - 12} cy={item.y} r="3" fill="#B7ACFF">
+                <circle cx={item.x - 12} cy={item.y} r="3" fill="#489EFF">
                   <animate 
                     attributeName="fill"
                     values={colorValues}

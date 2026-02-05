@@ -12,7 +12,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50">
       <div className="relative">
-        <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#1a1340]/200 to-transparent backdrop-blur-md" />
+        <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#1a1340]/80 to-transparent backdrop-blur-md" />
         <Container className="relative flex h-20 items-center justify-between">
           <a href="#" className="group inline-flex items-center gap-2">
             <Logo />
@@ -36,8 +36,8 @@ export function Navbar() {
               href="#get-started"
               className="relative inline-flex items-center justify-center p-[1px] rounded-md overflow-hidden group"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#8B80F9] to-[#5338FF]" />
-              <div className="relative bg-[#6051DC] px-3 py-1.5 rounded-[5px] text-sm font-semibold text-white hover:bg-[#6051DC]/90 transition">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#489EFF] to-[#0050FF]" />
+              <div className="relative bg-[#0078FF]/80 px-3 py-1.5 rounded-[5px] text-sm font-semibold text-white hover:bg-[#0078FF]/90 transition">
                 Get Started
               </div>
             </a>

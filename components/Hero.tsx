@@ -19,10 +19,10 @@ export function Hero() {
             <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row">
               <a
                 href="#product"
-                className="relative inline-flex items-center justify-center p-[1px] rounded-md overflow-hidden group shadow-lg shadow-indigo-500/20"
+                className="relative inline-flex items-center justify-center p-[1px] rounded-md overflow-hidden group shadow-lg shadow-blue-500/20"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#8B80F9] to-[#5338FF]" />
-                <div className="relative bg-[#6051DC] px-3 py-1.5 rounded-[5px] text-sm font-semibold text-white hover:bg-[#6051DC]/90 transition">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#489EFF] to-[#0050FF]" />
+                <div className="relative bg-[#0078FF]/80 px-3 py-1.5 rounded-[5px] text-sm font-semibold text-white hover:bg-[#0078FF]/90 transition">
                   Learn More
                 </div>
               </a>

@@ -4,7 +4,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-[#B7ACFF] to-white bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#489EFF] to-white bg-clip-text text-transparent;
   }
 }
 
@@ -19,7 +19,7 @@ html, body {
 body {
   @apply text-white antialiased;
   font-family: Arial, Helvetica, sans-serif;
-  background: radial-gradient(circle at 0% 0%, #6051DC 0%, #001229 70%);
+  background: radial-gradient(circle at 0% 0%, #004EA7 0%, #001229 70%);
   background-attachment: fixed;
 }
 

@@ -1,12 +1,10 @@
 import { Container } from "./Container";
 import Image, { StaticImageData } from "next/image";
 
-import seamlessOnboardingIcon from "@/assets/seamless_onboarding.png";
+import smartOnboardingIcon from "@/assets/smart_onboarding.png";
 import dynamicInvoicingIcon from "@/assets/dynamic_invoicing.png";
 import nonCustodialByDesignIcon from "@/assets/non_custodial_by_design.png";
-import saveOnFeesIcon from "@/assets/save_on_fees.png";
-import smartStablecoinPaymentsIcon from "@/assets/smart_stablecoin_payments.png";
-import accountingNativeSettlementIcon from "@/assets/accounting_native_settlement.png";
+import seamlessStablecoinPaymentsIcon from "@/assets/seamless_stablecoin_payments.png";
 import unifiedIdentityAcrossChainsIcon from "@/assets/unified_identity_across_chains.png";
 import humanReadablePaymentsIcon from "@/assets/human_readable_payments.png";
 
@@ -21,7 +19,7 @@ const features: Feature[] = [
     title: "Smart Onboarding",
     body:
       "Automatically route users to the most efficient exchange or on‑ramp based on KYC, jurisdiction, and payment needs.",
-    icon: seamlessOnboardingIcon,
+    icon: smartOnboardingIcon,
   },
   {
     title: "Dynamic Invoicing",
@@ -35,24 +33,12 @@ const features: Feature[] = [
       "Tempest is built as a self-custody wallet powered by MPC signatures. Users and businesses retain full control of their funds—Tempest never takes custody.",
     icon: nonCustodialByDesignIcon,
   },
-  // {
-  //   title: "Save on fees when making high frequent transactions.",
-  //   body:
-  //     "Payments in stablecoin are extremely low compared to traditional fiat ramps.",
-  //   icon: saveOnFeesIcon,
-  // },
   {
     title: "Seamless Stablecoin Payments",
     body:
       "Pay across chains and tokens using existing balances. Tempest handles routing, conversion, and settlement behind the scenes.",
-    icon: smartStablecoinPaymentsIcon,
+    icon: seamlessStablecoinPaymentsIcon,
   },
-  // {
-  //   title: "Accounting‑Native Settlement",
-  //   body:
-  //     "Sync automatically with ERP, accounting, and tax software once funds are received—keeping records clean and auditable.",
-  //   icon: accountingNativeSettlementIcon,
-  // },
   {
     title: "Unified Identity Across Chains",
     body:
@@ -88,7 +74,7 @@ export function TrustSection() {
                 className="absolute inset-0 rounded-xl"
                 style={{
                   padding: '1px',
-                  background: 'linear-gradient(to right,rgba(255, 255, 255, 0.5), #B7ACFF)',
+                  background: 'linear-gradient(to right, #489EFF, #0050FF)',
                   WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                   WebkitMaskComposite: 'xor',
                   maskComposite: 'exclude',
