@@ -24,13 +24,13 @@ const features: Feature[] = [
   {
     title: "Dynamic Invoicing",
     body:
-      "Generate invoices and payment codes containing the exact chain, token, wallet address, and amount—precise and unambiguous.",
+      "Generate invoices and payment codes containing the exact chain, token, wallet address, and amount–precise and unambiguous.",
     icon: dynamicInvoicingIcon,
   },
   {
     title: "Non-Custodial by Design",
     body:
-      "Tempest is built as a self-custody wallet powered by MPC signatures. Users and businesses retain full control of their funds—Tempest never takes custody.",
+      "Tempest is built as a self-custody wallet powered by MPC signatures. Users and businesses retain full control of their funds–Tempest never takes custody.",
     icon: nonCustodialByDesignIcon,
   },
   {
@@ -42,13 +42,13 @@ const features: Feature[] = [
   {
     title: "Unified Identity Across Chains",
     body:
-      "Link counterparties to a single verified identity—even across multiple wallets and blockchains.",
+      "Link counterparties to a single verified identity–even across multiple wallets and blockchains.",
     icon: unifiedIdentityAcrossChainsIcon,
   },
   {
     title: "Human‑Readable Payments",
     body:
-      "Send and receive using familiar identifiers like phone numbers or verified business profiles—no error‑prone wallet addresses.",
+      "Send and receive using familiar identifiers like phone numbers or verified business profiles–no error‑prone wallet addresses.",
     icon: humanReadablePaymentsIcon,
   },
 ];
@@ -62,7 +62,7 @@ export function TrustSection() {
             How Tempest Works
           </h2>
           <p className="mt-4 text-[16px] leading-relaxed text-white">
-            We abstract exchanges, blockchains, and wallets into a single flow—so stablecoins can be onboarded, sent, and settled as easily while unlocking the capabilities of on‑chain tools.
+            We abstract exchanges, blockchains, and wallets into a single flow–so stablecoins can be onboarded, sent, and settled as easily while unlocking the capabilities of on‑chain tools.
           </p>
         </div>
 

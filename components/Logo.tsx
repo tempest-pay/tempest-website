@@ -11,7 +11,7 @@ export function Logo() {
         height={32}
         className="object-contain"
       />
-      <span className="text-lg font-bold tracking-tight">Tempest</span>
+      <span className="text-lg font-medium tracking-tight">Tempest</span>
     </div>
   );
 }

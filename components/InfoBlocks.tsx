@@ -7,7 +7,7 @@ export function InfoBlocks() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="text-gradient text-md font-regular">Built for Programmability</div>
           <p className="mt-2 text-sm text-white">
-            Tempest lays the foundation for programmable and composable stablecoin workflows—enabling conditional
+            Tempest lays the foundation for programmable and composable stablecoin workflows–enabling conditional
             payments, automated settlement, and deeper integration with financial and operational systems.
           </p>
         </div>
