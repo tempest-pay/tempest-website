@@ -7,8 +7,8 @@ export function Logo() {
       <Image
         src={logoImg}
         alt="Tempest Logo"
-        width={32}
-        height={32}
+        width={45}
+        height={45}
         className="object-contain"
       />
       <span className="text-lg font-medium tracking-tight">Tempest</span>
